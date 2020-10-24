@@ -1,0 +1,22 @@
+{
+  "name": "relayserver",
+  "version": "1.0.0",
+  "description": "Multiplexes data received from Pattern Capture",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "express": "latest",
+    "express-graphql": "latest",
+    "graphql": "latest",
+    "graphiql": "latest",
+    "node-fetch": "latest",
+    "cors": "latest",
+    "body-parser": "latest",
+    "socket.io": "latest"
+  },
+  "author": "Anurag Sharma",
+  "license": "ISC"
+}
