@@ -15,7 +15,9 @@
     "node-fetch": "latest",
     "cors": "latest",
     "body-parser": "latest",
-    "socket.io": "latest"
+    "socket.io": "latest",
+    "redis": "latest",
+    "config": "latest"
   },
   "author": "Anurag Sharma",
   "license": "ISC"

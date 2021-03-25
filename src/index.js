@@ -15,6 +15,7 @@
 
 var express = require("express");
 var app = express();
+var http = require("http").createServer(app);
 const relayManager = require("./relayManager");
 var bodyParser = require("body-parser");
 app.use(bodyParser.json());
@@ -29,7 +30,7 @@ app.post(RELAY_PATH, (req, res) => {
 });
 
 
-app.listen(8086, function() {
+http.listen(8086, function() {
 
     console.log("started");
 
