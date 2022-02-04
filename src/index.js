@@ -18,11 +18,21 @@ var app = express();
 var http = require("http").createServer(app);
 const relayManager = require("./relayManager");
 var bodyParser = require("body-parser");
+
+//const config = process.env;
+const config = require("./config.json");
+
+const panelInfoServer = require("./panelinfoserver.js");
+
 app.use(bodyParser.json());
 
-const RELAY_PATH = "/relay/:collectorId/:dependencyType/:dependencyId";
+const RELAY_PATH = "/relay/:collectorId/:dependencyType/:dependencyId", PING = '/ping';
 
-app.use(RELAY_PATH, relayManager);
+app.get(PING, function(req, res) {
+    res.send("pong");
+});
+
+app.use(RELAY_PATH, relayManager(config));
 
 app.post(RELAY_PATH, (req, res) => {
     console.log("______");
@@ -36,6 +46,7 @@ http.listen(8086, function() {
 
 });
 
+panelInfoServer(config);
 
 
 
