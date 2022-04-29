@@ -20,7 +20,9 @@
     "socket.io": "latest",
     "redis": "latest",
     "config": "latest",
-        "jsonwebtoken": "latest"
+    "jsonwebtoken": "latest",
+    "dotenv": "latest",
+    "sequelize": "latest"
   },
   "author": "Anurag Sharma",
   "license": "ISC"

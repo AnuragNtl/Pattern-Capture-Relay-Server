@@ -18,6 +18,7 @@ var app = express();
 var http = require("http").createServer(app);
 const relayManager = require("./relayManager");
 var bodyParser = require("body-parser");
+require("dotenv").config()
 
 //const config = process.env;
 const config = require("./config.json");

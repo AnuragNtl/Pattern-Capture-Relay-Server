@@ -23,10 +23,10 @@ type Pair {
 }
 
 type Node {
-    id: String,
-    type: String, 
-    dependencyId: String,
-    deliversToNodes: [String]
+    id: String!,
+    type: String!, 
+    dependencyId: String!,
+    deliversToNodes: [String]!
     inputParams: [Pair]
 }
 
@@ -37,6 +37,7 @@ type TokenResponse {
 type Query {
     getRegisteredPanelIds: [String],
     getCapturerIds: [String],
+    getNodeIds: [String],
     getNodeDetails(collectorId:String, nodeId: String): Node
 }
 
